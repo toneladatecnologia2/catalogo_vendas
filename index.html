@@ -122,7 +122,7 @@
           </div>
           <div>
             <span id="store-brand-name" class="font-extrabold text-lg sm:text-xl tracking-tight text-slate-900 dark:text-white flex items-center gap-1.5">
-              Aurora <span class="text-brand-600 dark:text-brand-400">Store</span>
+              Betão <span class="text-brand-600 dark:text-brand-400">Imports</span>
             </span>
             <span class="block text-[11px] font-medium text-slate-500 dark:text-slate-400 -mt-1">
               Catálogo Oficial WhatsApp
@@ -655,7 +655,7 @@
             <div class="bg-slate-50 dark:bg-slate-800/60 p-3 rounded-xl border border-slate-200 dark:border-slate-700">
               <label class="block text-xs font-bold text-slate-600 dark:text-slate-300 mb-1.5 flex items-center justify-between">
                 <span>Cupom de Desconto:</span>
-                <span class="text-[10px] text-brand-600 dark:text-brand-400 font-normal">Use: AURORA10</span>
+                <span class="text-[10px] text-brand-600 dark:text-brand-400 font-normal">Use: BETAO10</span>
               </label>
               <div class="flex gap-2">
                 <input 
@@ -951,13 +951,13 @@
     const DEFAULT_CONFIG = {
       storeName: 'Betão Imports',
       whatsapp: '5511942794207', // Change to your business WhatsApp (DDI+DDD+Phone)
-      pixKey: 'pix@aurorastore.com.br',
+      pixKey: 'pix@betaoimports.com.br',
       announcement: '🚀 Frete Grátis acima de R$ 199 | Parcelamento em até 10x sem juros | Envio para todo o Brasil'
     };
 
     let storeConfig = { ...DEFAULT_CONFIG };
     try {
-      const savedConfig = localStorage.getItem('aurora_store_config');
+      const savedConfig = localStorage.getItem('betao_imports_config');
       if (savedConfig) storeConfig = { ...DEFAULT_CONFIG, ...JSON.parse(savedConfig) };
     } catch (e) {
       console.warn('localStorage error', e);
@@ -1920,7 +1920,7 @@ Como posso prosseguir com o pagamento e envio?`;
       };
 
       try {
-        localStorage.setItem('aurora_store_config', JSON.stringify(storeConfig));
+        localStorage.setItem('betao_imports_config', JSON.stringify(storeConfig));
       } catch (e) {
         console.warn('Config save error', e);
       }
@@ -2086,7 +2086,7 @@ Como posso prosseguir com o pagamento e envio?`;
       document.getElementById('save-settings-btn').onclick = saveSettings;
       document.getElementById('reset-settings-default-btn').onclick = () => {
         storeConfig = { ...DEFAULT_CONFIG };
-        localStorage.removeItem('aurora_store_config');
+        localStorage.removeItem('betao_imports_config');
         populateSettingsInputs();
         applyStoreConfig();
         showToast('Configurações restauradas para o padrão.');
