@@ -3,45 +3,68 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="robots" content="noindex, nofollow">
-  <meta name="description" content="Demonstração visual de catálogo. Conteúdo e valores fictícios; não aceita pedidos.">
-  <title>Catálogo de Demonstração</title>
+  <meta name="description" content="Demonstração de catálogo digital criada por Tonelada Tecnologia. Produtos, valores e condições são fictícios.">
+  <meta name="theme-color" content="#090909">
+  <title>Catálogo Demo | by Tonelada Tecnologia</title>
   <style>
-    :root{font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#20251f;background:#f6f7f4;font-synthesis:none;text-rendering:optimizeLegibility}
-    *{box-sizing:border-box}body{margin:0}.demo-banner{background:#713d12;color:#fff;text-align:center;padding:12px 18px;font-size:.92rem;font-weight:700;line-height:1.5}
-    header{background:#fff;border-bottom:1px solid #e6e9e3}.header-inner,main,footer{max-width:1180px;margin:auto;padding-left:22px;padding-right:22px}.header-inner{min-height:84px;display:flex;align-items:center;gap:14px}.logo{height:48px;width:48px;object-fit:contain;border-radius:12px}.brand{font-size:1.2rem;font-weight:800}.brand small{display:block;color:#69736a;font-size:.75rem;font-weight:500;margin-top:3px}
-    main{padding-top:44px;padding-bottom:56px}.intro{max-width:720px;margin-bottom:28px}.eyebrow{color:#4b6d4c;font-weight:800;font-size:.78rem;text-transform:uppercase;letter-spacing:.08em}.intro h1{font-size:clamp(2rem,5vw,3rem);line-height:1.08;margin:10px 0}.intro p{color:#586158;line-height:1.65;margin:10px 0}.notice{border:1px solid #e7c888;background:#fff8e8;color:#654710;border-radius:12px;padding:14px 16px;font-size:.9rem;line-height:1.55;margin:22px 0 30px}
-    .toolbar{display:flex;gap:12px;align-items:center;justify-content:space-between;margin:22px 0}.toolbar input{width:min(100%,360px);padding:11px 13px;border:1px solid #d5dbd3;border-radius:9px;font:inherit;background:#fff}.count{font-size:.88rem;color:#687168}.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:18px}.card{background:#fff;border:1px solid #e4e8e2;border-radius:14px;overflow:hidden;box-shadow:0 3px 12px #1f2c1b0a}.image-wrap{position:relative;background:#eef0ec;aspect-ratio:1/1;display:grid;place-items:center}.image-wrap img{width:100%;height:100%;object-fit:contain}.tag{position:absolute;top:10px;left:10px;background:#fff;color:#464d45;border:1px solid #dfe3dd;padding:5px 8px;border-radius:99px;font-size:.7rem;font-weight:800}.card-body{padding:14px}.card h2{font-size:1rem;margin:0 0 7px}.card p{color:#697168;font-size:.82rem;line-height:1.45;margin:0 0 13px}.price{font-size:1.15rem;font-weight:850;color:#334c34}.price-note{display:block;font-size:.7rem;color:#7a8179;font-weight:500;margin-top:3px}.demo-button{display:block;width:100%;margin-top:13px;border:0;border-radius:8px;padding:10px;background:#e8ebe6;color:#535b52;font:inherit;font-size:.78rem;font-weight:700;cursor:not-allowed}.empty{display:none;padding:34px;text-align:center;color:#687168}.footnote{margin-top:30px;font-size:.8rem;color:#616b60;line-height:1.6}footer{border-top:1px solid #e2e6df;padding-top:20px;padding-bottom:30px;color:#687168;font-size:.8rem}
-    @media(max-width:520px){.header-inner,main,footer{padding-left:16px;padding-right:16px}.header-inner{min-height:72px}main{padding-top:30px}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}.card-body{padding:11px}.card h2{font-size:.9rem}.card p{font-size:.76rem}.toolbar{align-items:flex-start;flex-direction:column}.toolbar input{width:100%}}
+    :root{color-scheme:dark;--black:#090909;--panel:#141414;--panel2:#1d1d1b;--gold:#d8b45a;--gold-light:#f0d98f;--white:#f7f5ef;--muted:#aaa79d;--line:#343128;--green:#25d366;font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-synthesis:none;text-rendering:optimizeLegibility}
+    *{box-sizing:border-box}body{margin:0;background:var(--black);color:var(--white)}button,input{font:inherit}button{cursor:pointer}.demo-banner{background:#312816;color:#f5dda0;text-align:center;padding:11px 16px;font-size:.84rem;font-weight:750;line-height:1.5;border-bottom:1px solid #554522}.shipping{background:#17150f;color:var(--gold-light);text-align:center;padding:9px 14px;font-size:.8rem;border-bottom:1px solid var(--line)}
+    header{position:sticky;top:0;z-index:5;background:#0d0d0df2;backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}.header-inner,main,footer{max-width:1180px;margin:auto;padding-left:22px;padding-right:22px}.header-inner{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:15px}.brand-link{display:flex;align-items:center;gap:12px;color:inherit;text-decoration:none}.logo{height:46px;width:46px;object-fit:contain;border-radius:10px;background:#fff}.brand{font-size:1.1rem;font-weight:850;letter-spacing:.01em}.brand small{display:block;color:var(--muted);font-size:.72rem;font-weight:500;margin-top:3px}.header-actions{display:flex;gap:9px}.action{border:1px solid var(--line);border-radius:9px;padding:10px 13px;background:var(--panel);color:var(--white);font-size:.84rem;font-weight:700}.action:hover{border-color:var(--gold);color:var(--gold-light)}.cart-count{display:inline-grid;place-items:center;min-width:20px;height:20px;margin-left:4px;padding:0 5px;border-radius:20px;background:var(--gold);color:#17140b;font-size:.72rem}
+    main{padding-top:48px;padding-bottom:58px}.hero{padding:10px 0 24px;max-width:780px}.eyebrow{color:var(--gold);font-weight:800;font-size:.76rem;text-transform:uppercase;letter-spacing:.14em}.hero h1{font-size:clamp(2rem,5vw,3.55rem);line-height:1.05;margin:12px 0;color:var(--white)}.hero h1 span{color:var(--gold)}.hero p{color:#c3c0b7;line-height:1.7;max-width:680px}.notice{border:1px solid #69552b;background:#211c10;color:#eee0b8;border-radius:11px;padding:14px 16px;font-size:.86rem;line-height:1.6;margin:18px 0 27px}.notice strong{color:var(--gold-light)}.toolbar{display:flex;gap:12px;align-items:center;justify-content:space-between;margin:24px 0 16px}.toolbar input{width:min(100%,380px);padding:11px 13px;border:1px solid var(--line);border-radius:9px;background:var(--panel);color:var(--white);outline:none}.toolbar input:focus{border-color:var(--gold)}.count{font-size:.84rem;color:var(--muted)}
+    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:17px}.card{background:var(--panel);border:1px solid #292821;border-radius:13px;overflow:hidden;transition:transform .18s,border-color .18s}.card:hover{transform:translateY(-3px);border-color:#806b37}.image-wrap{position:relative;background:#211f1a;aspect-ratio:1/1;display:grid;place-items:center}.image-wrap img{width:100%;height:100%;object-fit:contain}.tag{position:absolute;top:10px;left:10px;background:#17140e;color:var(--gold-light);border:1px solid #806b37;padding:5px 8px;border-radius:99px;font-size:.67rem;font-weight:800;letter-spacing:.06em}.card-body{padding:14px}.card h2{font-size:.98rem;margin:0 0 7px;color:var(--white)}.card p{color:var(--muted);font-size:.8rem;line-height:1.5;margin:0 0 13px}.price{font-size:1.12rem;font-weight:850;color:var(--gold-light)}.price-note{display:block;font-size:.68rem;color:#aaa38d;font-weight:500;margin-top:4px}.add-button{width:100%;margin-top:13px;border:1px solid #987b37;border-radius:8px;padding:10px;background:#302713;color:#f3dc98;font-size:.78rem;font-weight:750}.add-button:hover{background:#493b1e}.empty{display:none;padding:34px;text-align:center;color:var(--muted)}.portfolio-cta{margin-top:40px;padding:24px;border:1px solid var(--line);border-radius:14px;background:linear-gradient(120deg,#17150f,#141414);display:flex;align-items:center;justify-content:space-between;gap:18px}.portfolio-cta h2{font-size:1.15rem;margin:0 0 6px}.portfolio-cta p{margin:0;color:var(--muted);font-size:.86rem;line-height:1.5}.whatsapp{flex-shrink:0;text-decoration:none;background:var(--green);color:#062d15;padding:12px 16px;border-radius:9px;font-size:.84rem;font-weight:850}.whatsapp:hover{filter:brightness(1.08)}.footnote{margin-top:24px;font-size:.76rem;color:#99958a;line-height:1.6}
+    footer{border-top:1px solid var(--line);padding-top:20px;padding-bottom:28px;color:var(--muted);font-size:.8rem;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}footer strong{color:var(--gold-light)}
+    .drawer-backdrop{position:fixed;inset:0;z-index:10;background:#000a;display:none}.drawer-backdrop.open{display:block}.drawer{position:absolute;right:0;top:0;height:100%;width:min(420px,100%);background:#101010;border-left:1px solid var(--line);padding:20px;display:flex;flex-direction:column}.drawer-head{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);padding-bottom:14px}.drawer-head h2{font-size:1.2rem;margin:0;color:var(--gold-light)}.close{border:0;background:transparent;color:var(--white);font-size:1.5rem}.cart-items{overflow:auto;flex:1;padding:10px 0}.cart-item{display:flex;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px solid var(--line);font-size:.88rem}.remove{border:0;background:none;color:#e5a19a;font-size:.78rem}.cart-total{border-top:1px solid var(--line);padding-top:14px;display:flex;justify-content:space-between;font-weight:800;color:var(--gold-light)}.cart-disclaimer{margin-top:14px;padding:12px;background:#211c10;border:1px solid #554522;border-radius:9px;color:#e9dcb6;font-size:.78rem;line-height:1.5}.empty-cart{color:var(--muted);font-size:.9rem;padding:16px 0}.toast{position:fixed;z-index:20;bottom:18px;left:50%;transform:translateX(-50%);background:#242116;color:var(--gold-light);border:1px solid #76602d;padding:11px 16px;border-radius:9px;display:none;font-size:.85rem}
+    @media(max-width:600px){.header-inner,main,footer{padding-left:16px;padding-right:16px}.header-inner{min-height:70px}.brand{font-size:.95rem}.logo{height:39px;width:39px}.action{padding:9px 10px;font-size:.77rem}.action.contact-top{display:none}main{padding-top:32px}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.card-body{padding:10px}.card h2{font-size:.88rem}.card p{font-size:.73rem}.toolbar{align-items:flex-start;flex-direction:column}.toolbar input{width:100%}.portfolio-cta{align-items:flex-start;flex-direction:column}.whatsapp{width:100%;text-align:center}.price{font-size:1rem}}
   </style>
 </head>
 <body>
-  <div class="demo-banner">DEMONSTRAÇÃO — preços fictícios para teste visual. Esta página não vende produtos nem recebe pedidos.</div>
+  <div class="demo-banner">CATÁLOGO DE DEMONSTRAÇÃO • itens, preços e condições ilustrativos • sem venda de produtos</div>
+  <div class="shipping">✦ “ENVIO GRÁTIS” — mensagem demonstrativa, não representa oferta ou condição real de entrega ✦</div>
   <header>
     <div class="header-inner">
-      <img class="logo" src="./img/logo.jpg" alt="Logo da loja">
-      <div class="brand">Catálogo de Demonstração<small>Ambiente de teste • sem compras</small></div>
+      <a class="brand-link" href="#inicio" aria-label="Início do catálogo">
+        <img class="logo" src="./img/logo.jpg" alt="Logo demonstrativa">
+        <span class="brand">Catálogo Premium<small>Exemplo de loja virtual</small></span>
+      </a>
+      <div class="header-actions">
+        <a class="action contact-top" href="https://wa.me/?text=Ol%C3%A1%21%20Gostaria%20de%20conhecer%20o%20servi%C3%A7o%20de%20cria%C3%A7%C3%A3o%20de%20cat%C3%A1logos%20digitais%20da%20Tonelada%20Tecnologia." target="_blank" rel="noopener noreferrer" aria-label="Falar com Tonelada Tecnologia sobre criação de catálogo">Contato</a>
+        <button class="action" id="open-cart" type="button" aria-haspopup="dialog">Minha lista <span class="cart-count" id="cart-count">0</span></button>
+      </div>
     </div>
   </header>
-  <main>
-    <section class="intro" aria-labelledby="page-title">
-      <div class="eyebrow">Vitrine de teste</div>
-      <h1 id="page-title">Explore o catálogo</h1>
-      <p>Esta página demonstra a organização das imagens e dos cards em uma vitrine responsiva. Os nomes são genéricos e os valores servem somente para testar o layout.</p>
+  <main id="inicio">
+    <section class="hero" aria-labelledby="page-title">
+      <div class="eyebrow">Design elegante • experiência digital</div>
+      <h1 id="page-title">Seu catálogo, <span>do seu jeito.</span></h1>
+      <p>Uma demonstração de catálogo digital com identidade visual sofisticada, busca de produtos e lista interativa. A Tonelada Tecnologia cria experiências web sob medida para apresentar marcas e serviços.</p>
     </section>
-    <aside class="notice"><strong>Aviso:</strong> todos os itens e preços exibidos são dados fictícios de demonstração. R$ 1,00 não é preço de venda ou oferta. Não há botão de compra, carrinho, checkout ou envio de pedido. A página não apresenta indicações de uso, benefícios ou alegações de saúde.</aside>
+    <aside class="notice"><strong>Ambiente de demonstração:</strong> nomes, imagens, valores de R$ 1,00 e texto de envio grátis são apenas exemplos de interface. Os itens não estão à venda nesta página. A lista de interesse é simulada e não envia pedidos.</aside>
     <div class="toolbar">
-      <input id="search" type="search" placeholder="Filtrar itens da demonstração..." aria-label="Filtrar itens da demonstração">
+      <input id="search" type="search" placeholder="Buscar no catálogo de demonstração..." aria-label="Buscar no catálogo">
       <span class="count" id="count" aria-live="polite"></span>
     </div>
-    <section class="grid" id="catalog" aria-label="Itens demonstrativos"></section>
+    <section class="grid" id="catalog" aria-label="Produtos ilustrativos"></section>
     <p class="empty" id="empty">Nenhum item corresponde à busca.</p>
-    <p class="footnote">As imagens são usadas apenas para compor uma demonstração de interface. Antes de qualquer publicação comercial, confirme a autorização para comercializar cada produto e o uso das imagens nos países de destino.</p>
+    <section class="portfolio-cta" aria-label="Contato sobre serviços da Tonelada Tecnologia">
+      <div><h2>Quer um catálogo para sua marca?</h2><p>Fale com a Tonelada Tecnologia sobre criação de sites e catálogos digitais.</p></div>
+      <a class="whatsapp" href="https://wa.me/?text=Ol%C3%A1%21%20Gostaria%20de%20conhecer%20o%20servi%C3%A7o%20de%20cria%C3%A7%C3%A3o%20de%20cat%C3%A1logos%20digitais%20da%20Tonelada%20Tecnologia." target="_blank" rel="noopener noreferrer">WhatsApp • serviço de criação</a>
+    </section>
+    <p class="footnote">As imagens servem exclusivamente para esta demonstração de interface. Esta página não processa compras nem pedidos de produtos. Antes de usar imagens ou anunciar produtos em um projeto comercial, confirme as autorizações e regras aplicáveis ao mercado de destino.</p>
   </main>
-  <footer>Catálogo demonstrativo • valores e conteúdo fictícios • sem disponibilidade para compra.</footer>
+  <footer><span>Catálogo de demonstração • interface ilustrativa</span><strong>by Tonelada Tecnologia</strong></footer>
+
+  <div class="drawer-backdrop" id="drawer-backdrop">
+    <section class="drawer" role="dialog" aria-modal="true" aria-labelledby="drawer-title">
+      <div class="drawer-head"><h2 id="drawer-title">Lista de interesse (demo)</h2><button class="close" id="close-cart" aria-label="Fechar lista" type="button">&times;</button></div>
+      <div class="cart-items" id="cart-items"></div>
+      <div class="cart-total"><span>Total ilustrativo</span><span id="cart-total">R$ 0,00</span></div>
+      <p class="cart-disclaimer">Simulação para apresentar a funcionalidade de uma lista/carrinho. Não é possível concluir compras, reservar itens ou enviar pedidos por esta demonstração.</p>
+    </section>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
   <script>
-    // Imagens disponíveis no repositório, excluindo os arquivos reta_* usados como teste.
-    const items = [
+    // Imagens do catálogo. Arquivos reta_* foram excluídos por serem material de teste.
+    const products = [
       ['Cbl_alluvi_esgotado.jpeg', 'Item demonstrativo 01'],
       ['Dysport_esgotado.jpeg', 'Item demonstrativo 02'],
       ['Glow_alluvi.jpeg', 'Item demonstrativo 03'],
@@ -57,33 +80,71 @@
       ['tg_5.jpeg', 'Item demonstrativo 13'],
       ['tizergen.jpeg', 'Item demonstrativo 14'],
       ['todas_as_tirzes.jpeg', 'Item demonstrativo 15']
-    ];
+    ].map(([image, name], id) => ({ id, image, name, price: 1 }));
+    const money = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' });
     const catalog = document.getElementById('catalog');
     const search = document.getElementById('search');
-    const count = document.getElementById('count');
-    const empty = document.getElementById('empty');
-    const price = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(1);
-    function render() {
+    const cart = new Map();
+    const cartItems = document.getElementById('cart-items');
+    const backdrop = document.getElementById('drawer-backdrop');
+    let toastTimer;
+    function renderCatalog() {
       const query = search.value.trim().toLocaleLowerCase('pt-BR');
-      const filtered = items.filter(([, name]) => name.toLocaleLowerCase('pt-BR').includes(query));
-      catalog.innerHTML = filtered.map(([image, name]) => `
+      const visible = products.filter(product => product.name.toLocaleLowerCase('pt-BR').includes(query));
+      catalog.innerHTML = visible.map(product => `
         <article class="card">
-          <div class="image-wrap">
-            <img src="./img/${image}" alt="Imagem ilustrativa: ${name}" loading="lazy">
-            <span class="tag">DEMO</span>
-          </div>
-          <div class="card-body">
-            <h2>${name}</h2>
-            <p>Conteúdo ilustrativo, sem descrição ou indicação de uso.</p>
-            <div class="price">${price}<span class="price-note">valor fictício para teste de interface</span></div>
-            <button class="demo-button" type="button" disabled aria-disabled="true">Somente demonstração</button>
+          <div class="image-wrap"><img src="./img/${product.image}" alt="Imagem ilustrativa do ${product.name}" loading="lazy"><span class="tag">DEMO</span></div>
+          <div class="card-body"><h2>${product.name}</h2><p>Produto ilustrativo para demonstração de layout; sem descrição ou indicação de uso.</p>
+            <div class="price">${money.format(product.price)}<span class="price-note">preço fictício para teste</span></div>
+            <button class="add-button" type="button" data-add="${product.id}">Adicionar à lista demo</button>
           </div>
         </article>`).join('');
-      count.textContent = `${filtered.length} ${filtered.length === 1 ? 'item' : 'itens'} demonstrativos`;
-      empty.style.display = filtered.length ? 'none' : 'block';
+      document.getElementById('count').textContent = `${visible.length} itens demonstrativos`;
+      document.getElementById('empty').style.display = visible.length ? 'none' : 'block';
     }
-    search.addEventListener('input', render);
-    render();
+    function renderCart() {
+      const entries = [...cart.entries()];
+      const quantity = entries.reduce((sum, [, qty]) => sum + qty, 0);
+      document.getElementById('cart-count').textContent = quantity;
+      if (!entries.length) {
+        cartItems.innerHTML = '<p class="empty-cart">Sua lista de demonstração está vazia.</p>';
+      } else {
+        cartItems.innerHTML = entries.map(([id, qty]) => {
+          const product = products.find(item => item.id === id);
+          return `<div class="cart-item"><span>${product.name} × ${qty}<br><small>${money.format(product.price * qty)} (valor fictício)</small></span><button class="remove" type="button" data-remove="${id}">Remover</button></div>`;
+        }).join('');
+      }
+      const total = entries.reduce((sum, [id, qty]) => sum + products.find(item => item.id === id).price * qty, 0);
+      document.getElementById('cart-total').textContent = money.format(total);
+    }
+    function showToast(message) {
+      const toast = document.getElementById('toast');
+      toast.textContent = message;
+      toast.style.display = 'block';
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => { toast.style.display = 'none'; }, 2400);
+    }
+    catalog.addEventListener('click', event => {
+      const button = event.target.closest('[data-add]');
+      if (!button) return;
+      const id = Number(button.dataset.add);
+      cart.set(id, (cart.get(id) || 0) + 1);
+      renderCart();
+      showToast('Item adicionado à lista de demonstração. Nenhum pedido foi enviado.');
+    });
+    cartItems.addEventListener('click', event => {
+      const button = event.target.closest('[data-remove]');
+      if (!button) return;
+      cart.delete(Number(button.dataset.remove));
+      renderCart();
+    });
+    document.getElementById('open-cart').addEventListener('click', () => backdrop.classList.add('open'));
+    document.getElementById('close-cart').addEventListener('click', () => backdrop.classList.remove('open'));
+    backdrop.addEventListener('click', event => { if (event.target === backdrop) backdrop.classList.remove('open'); });
+    document.addEventListener('keydown', event => { if (event.key === 'Escape') backdrop.classList.remove('open'); });
+    search.addEventListener('input', renderCatalog);
+    renderCatalog();
+    renderCart();
   </script>
 </body>
 </html>
